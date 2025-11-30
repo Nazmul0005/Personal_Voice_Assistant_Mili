@@ -1,141 +1,132 @@
-# Mili Voice Assistant (`mili.py`)
+# 🎤 Mili Voice Assistant
 
-Mili is a powerful, Python-based personal voice assistant designed to automate system tasks, manage files, and assist with coding projects. It integrates with Google's Gemini AI for intelligent responses and code generation, and connects to GitHub for project management.
+A powerful Python-based personal voice assistant that automates system tasks, manages files, and assists with coding projects. Mili integrates with Google's Gemini AI for intelligent responses and code generation, with seamless GitHub integration for project management.
 
-## 🚀 Features
+## ✨ Features
 
-### 1. 🤖 AI & Coding Assistance
+### 🤖 AI & Coding Assistance
 
--**General Queries**: Ask any question and get intelligent responses powered by Google Gemini 2.5 Flash.
+- **Intelligent Conversations**: Ask questions and receive AI-powered responses using Google Gemini 2.5 Flash
+- **Automated Project Generation**: 
+  - Describe your project idea in natural language
+  - Mili generates complete, functional Python projects with:
+    - `main.py` - Complete source code
+    - `requirements.txt` - All dependencies listed
+    - `README.md` - Project documentation
+  - Projects are saved in `generated_projects/` directory
 
--**Project Generation**:
+- **GitHub Integration**:
+  - Automatically creates public repositories on your GitHub account
+  - Initializes local Git repository
+  - Commits and pushes code to GitHub
+  - Provides live GitHub URL for sharing
 
-    -**Command**: "Create a project called [description]" or "Generate project [description]"
+**Example Commands:**
+- "Create a project called calculator app"
+- "Generate project for web scraper"
 
-    -**How it works**: Mili uses Google's Gemini AI to interpret your description and generates a complete, functional Python project.
+### 💻 System Control
 
-    -**Output**: Creates a folder in `generated_projects/` containing:
+- **System Monitoring**: Check CPU and RAM usage in real-time
+- **Volume Management**: Increase, decrease, mute, or set specific volume levels
+- **Power Options**: Lock, sleep, or shutdown with optional timers
+- **Battery Info**: Monitor battery percentage and charging status
+- **Screenshots**: Capture and save screenshots instantly
 
-    -`main.py`: The complete source code.
+**Example Commands:**
+- "What's my CPU usage?"
+- "Increase volume"
+- "Take a screenshot"
+- "Lock my computer"
 
-    -`requirements.txt`: List of necessary dependencies.
+### 📁 File & Folder Management
 
-    -`README.md`: Documentation for the generated project.
+- **Create/Delete**: Manage folders and files through voice commands
+- **Search**: Find files by extension (PDF, DOCX, etc.)
+- **Quick Navigation**: Open common directories (Downloads, Documents, Desktop, Pictures)
 
--**GitHub Integration**:
+**Example Commands:**
+- "Create a folder called projects"
+- "Find PDF files"
+- "Open Downloads"
 
-    -**Automation**: After generating the project locally, Mili automatically:
+### 🌐 Web & Applications
 
-    1. Creates a new**public** repository on your GitHub account.
+- **Application Control**: Launch and close apps (Calculator, Notepad, Terminal, PyCharm)
+- **Web Navigation**: Quick access to Google, YouTube, GitHub, LinkedIn, Google Calendar
+- **Information Services**: Current time, Wikipedia searches, jokes, and more
 
-    2. Initializes a local Git repository.
+**Example Commands:**
+- "Open Calculator"
+- "Search Wikipedia for Python programming"
+- "What time is it?"
 
-    3. Commits the generated files.
+## 📋 Prerequisites
 
-    4. Pushes the code to the new GitHub repository.
+- **Operating System**: Windows (required for `pyttsx3` SAPI5 engine and system commands)
+- **Python**: Version 3.7 or higher
+- **Git**: Installed and configured for GitHub integration
+- **Microphone**: Connected and set as default recording device
 
-    -**Result**: You get a live GitHub URL ready to share or clone.
+## 🔧 Installation
 
-### 2. 💻 System Control
-
--**System Stats**: Check CPU and RAM usage.
-
--**Volume Control**: Increase, decrease, mute, or set specific volume levels.
-
--**Power Management**: Lock, sleep, or shutdown the computer (with timer options).
-
--**Battery Status**: Check battery percentage and charging status.
-
--**Screenshots**: Take and save screenshots instantly.
-
-### 3. 📁 File & Folder Management
-
--**Create/Delete**: Create or delete folders and files via voice commands.
-
--**Search**: Find files by extension (e.g., "Find PDF files").
-
--**Navigation**: Open common directories like Downloads, Documents, Desktop, Pictures, etc.
-
-### 4. 🌐 Web & Applications
-
--**App Control**: Open and close applications like Calculator, Notepad, Terminal, and PyCharm.
-
--**Web Navigation**: Open Google, YouTube, GitHub, LinkedIn, and Google Calendar.
-
--**Information**: Get current time, search Wikipedia, or hear a joke.
-
-## 🛠️ Prerequisites
-
--**OS**: Windows (Required for `pyttsx3` sapi5 engine and system commands).
-
--**Python**: 3.x installed.
-
--**Git**: Installed and configured for GitHub integration.
-
-## 📦 Installation
-
-1. **Clone the repository** (if applicable) or download `mili.py`.
-2. **Install dependencies**:
-
+1. **Clone or download the repository**
    ```bash
+   git clone <repository-url>
+   cd mili-voice-assistant
+   ```
 
+2. **Install dependencies**
+   ```bash
    pip install -r requirements.txt
-
    ```
 
-   *Key libraries: `SpeechRecognition`, `pyttsx3`, `google-genai`, `psutil`, `pyautogui`, `pycaw`, `PyGithub`, `GitPython`.*
-3. **Environment Setup**:
+   **Key dependencies:**
+   - `SpeechRecognition` - Voice input processing
+   - `pyttsx3` - Text-to-speech engine
+   - `google-generativeai` - Gemini AI integration
+   - `psutil` - System monitoring
+   - `pyautogui` - Screenshot functionality
+   - `pycaw` - Volume control
+   - `PyGithub` - GitHub API integration
+   - `GitPython` - Git operations
 
-   Create a `.env` file in the same directory with your API keys:
-
+3. **Configure API keys**
+   
+   Create a `.env` file in the project root:
    ```env
-
-   GOOGLE_API_KEY=your_gemini_api_key
-
-   GITHUB_TOKEN=your_github_personal_access_token
-
+   GOOGLE_API_KEY=your_gemini_api_key_here
+   GITHUB_TOKEN=your_github_personal_access_token_here
    ```
 
-## 🎤 Usage
+   **To get your API keys:**
+   - **Google Gemini API**: Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - **GitHub Token**: Go to GitHub Settings → Developer settings → Personal access tokens → Generate new token (classic)
+     - Required scopes: `repo`, `user`
 
-Run the assistant:
+## 🚀 Usage
 
+Start Mili by running:
 ```bash
-
-pythonmili.py
-
+python mili.py
 ```
 
-### Common Voice Commands
+Speak clearly into your microphone after hearing Mili's prompt. The assistant will process your command and respond accordingly.
 
-| Category | Command Examples |
+### Command Categories
 
-|----------|------------------|
+| Category | Examples |
+|----------|----------|
+| **AI & Coding** | "Create a project called weather app", "Who made you?" |
+| **System Info** | "CPU usage", "Battery status", "Take a screenshot" |
+| **File Operations** | "Create folder reports", "Find PDF files", "Open Downloads" |
+| **Applications** | "Open Calculator", "Close Notepad", "Launch PyCharm" |
+| **Web Browsing** | "Open Google", "Search Wikipedia for AI", "Open YouTube" |
+| **Utilities** | "What time is it?", "Tell me a joke", "Exit" |
 
-| **AI & Code** | "Create a project called [description]", "Who made you?" |
+## 🎯 Example Interaction
 
-| **System** | "What's my CPU usage?", "Increase volume", "Take a screenshot", "Lock my computer" |
-
-| **Files** | "Create a folder called [name]", "Find PDF files", "Open Downloads" |
-
-| **Apps** | "Open Calculator", "Close Notepad", "Open PyCharm" |
-
-| **Web** | "Open Google", "Search Wikipedia for [topic]", "Play music" |
-
-| **General** | "What time is it?", "Tell me a joke", "Exit" |
-
-## 📝 Notes
-
--**Microphone**: Ensure your microphone is set as the default recording device. The script currently uses `device_index=2` (you may need to adjust this in `takeCommand()` if it doesn't pick up audio).
-
--**Admin Rights**: Some system commands (like shutdown) might require running the script as Administrator.
-
-## 🗣️ Demo Conversation
-
-Here is a real interaction with Mili:
-
-```text
-
+```
 User: sing a song for me
 
 Mili: I can't physically sing, but I can share some lyrics for you! How about "Twinkle, twinkle, little star, how I wonder what you are?"
@@ -236,9 +227,57 @@ Mili: CPU usage is 11.0 percent
 
 Mili: RAM usage is 85.2 percent. 2.3 gigabytes available
 
-
 User: ok bye
-
 Mili: Goodbye! Have a nice day.
-
 ```
+
+## ⚙️ Configuration
+
+### Microphone Setup
+
+The script uses `device_index=2` by default. If Mili doesn't pick up your voice:
+
+1. List available microphones:
+   ```python
+   import speech_recognition as sr
+   for index, name in enumerate(sr.Microphone.list_microphone_names()):
+       print(f"Microphone {index}: {name}")
+   ```
+
+2. Update the `device_index` in the `takeCommand()` function in `mili.py`
+
+### Permissions
+
+Some commands require elevated permissions:
+- **Shutdown/Sleep**: Run as Administrator on Windows
+- **Volume Control**: Requires audio devices to be properly configured
+
+## 🛠️ Troubleshooting
+
+**Mili doesn't hear me:**
+- Check microphone permissions and default device settings
+- Adjust `device_index` in `takeCommand()` function
+
+**GitHub push fails:**
+- Verify your GitHub token has `repo` permissions
+- Ensure Git is installed and configured (`git config --global user.name` and `user.email`)
+
+**API errors:**
+- Confirm `.env` file exists with valid API keys
+- Check API quotas and rate limits
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 👤 Author
+
+**Nazmul Islam**
+
+---
+
+*Built with ❤️ using Python and Google Gemini AI*
