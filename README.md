@@ -1,4 +1,14 @@
 # 🎤 Mili Voice Assistant
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Windows](https://img.shields.io/badge/Platform-Windows-brightgreen)
+![Gemini AI](https://img.shields.io/badge/AI-Google%20Gemini-orange)
+![SpeechRecognition](https://img.shields.io/badge/Voice-SpeechRecognition-yellow)
+![TTS](https://img.shields.io/badge/TTS-pyttsx3-red)
+![Automation](https://img.shields.io/badge/System-Automation-lightgrey)
+![GitHub API](https://img.shields.io/badge/GitHub-API-black)
+![Project Generator](https://img.shields.io/badge/Feature-Project%20Generator-purple)
+
+
 
 A powerful Python-based personal voice assistant that automates system tasks, manages files, and assists with coding projects. Mili integrates with Google's Gemini AI for intelligent responses and code generation, with seamless GitHub integration for project management.
 
