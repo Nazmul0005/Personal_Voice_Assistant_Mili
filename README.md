@@ -14,6 +14,12 @@ Mili A powerful Python-based personal voice assistant that automates system task
   <img src="mili.png" alt="Project Screenshot" width="600"/>
 </p>
 
+<p align="center">
+  <a href="https://drive.google.com/file/d/1e5Zfm7JcB2wx8ayKlnWXeaOkhb9AINIr/view?usp=sharing">
+    <img src="images/video-thumbnail.png" alt="Watch Video" width="600"/>
+  </a>
+</p>
+
 ## ✨ Features
 
 ### 🤖 AI & Coding Assistance
