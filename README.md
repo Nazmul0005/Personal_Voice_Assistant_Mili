@@ -11,12 +11,12 @@
 Mili A powerful Python-based personal voice assistant that automates system tasks, manages files, and assists with coding projects. Mili integrates with Google's Gemini AI for intelligent responses and code generation, with seamless GitHub integration for project management.
 
 <p align="center">
-  <img src="mili.png" alt="Project Screenshot" width="600"/>
+  <img src="mili.png" alt="Project Screenshot" width="800"/>
 </p>
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1e5Zfm7JcB2wx8ayKlnWXeaOkhb9AINIr/view?usp=sharing">
-    <img src="images/video-thumbnail.png" alt="Watch Video" width="600"/>
+    <img src="images/video-thumbnail.png" alt="Watch Video" width="700"/>
   </a>
 </p>
 
