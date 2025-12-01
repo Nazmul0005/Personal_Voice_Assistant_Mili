@@ -8,9 +8,11 @@
 ![GitHub API](https://img.shields.io/badge/GitHub-API-black)
 ![Project Generator](https://img.shields.io/badge/Feature-Project%20Generator-purple)
 
+Mili A powerful Python-based personal voice assistant that automates system tasks, manages files, and assists with coding projects. Mili integrates with Google's Gemini AI for intelligent responses and code generation, with seamless GitHub integration for project management.
 
-
-A powerful Python-based personal voice assistant that automates system tasks, manages files, and assists with coding projects. Mili integrates with Google's Gemini AI for intelligent responses and code generation, with seamless GitHub integration for project management.
+<p align="center">
+  <img src="mili.png" alt="Project Screenshot" width="600"/>
+</p>
 
 ## ✨ Features
 
